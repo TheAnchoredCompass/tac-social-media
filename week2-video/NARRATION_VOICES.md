@@ -16,3 +16,20 @@ Scripts: NARRATION_SCRIPTS.md. Owner rules: never use K. V. Hagen; women's voice
 
 License: the drafts were made on the free plan, which ElevenLabs says "cannot be used for any commercial purpose," and content made outside a paid subscription stays non-commercial after upgrading. The posted narration must be regenerated on a paid plan (Starter or higher) with these same voices and scripts.
 Source: https://elevenlabs.io/docs/help-center/legal/can-i-publish-the-content-i-generate-on-the-platform
+
+## Final licensed narration (generated Oct 24, 2026, about 9:33-9:35 PM CT, ElevenLabs Starter plan)
+
+Generated after the socials@ workspace was upgraded to Starter, which includes a commercial license for speech. One take each, Eleven v4, same scripts and voices as above. Total 2,145 credits.
+
+| Post | Voice | Length | Credits | ElevenLabs flow |
+|---|---|---|---|---|
+| 29 | Damian | 17.12 s | 259 | W2 Post 29 - Playful banter vs. bitter comments |
+| 35 | Professor Bill | 17.84 s | 257 | W2 Post 35 - When your boss sets an impossible deadline |
+| 30 | Arlo | 18.32 s | 304 | W2 Post 30 - Rewriting that text for the tenth time |
+| 36 | Henry | 17.52 s | 313 | W2 Post 36 - Difficult conversations need poise, not drama |
+| 31 | Lulu | 15.92 s | 250 | W2 Post 31 - The number one mistake couples make with chores |
+| 32 | Dylan Malc | 14.48 s | 239 | W2 Post 32 - In any heated conversation |
+| 33 | Clara | 18.96 s | 261 | W2 Post 33 - Setting a family boundary without drama |
+| 34 | Lulu | 16.24 s | 262 | W2 Post 34 - When your boss messages you late at night |
+
+Earlier free-plan takes in the same flows are drafts only and must not be posted.
