@@ -5,7 +5,7 @@
 | 5.42s | [regretful, slower] The words are sharp... and you know they'd cut both ways. |
 | 10.40s | [calm, warm] So you pause. You tell Tack what it really feels like: unimportant. And it helps you say it plainly. |
 | 17.94s | [relieved] Honest. Not cruel. And this time, they actually hear you. |
-| 26.51s | [warm, steady] Pause. Ask. Say it better. The Anchored Compass. |
+| 26.51s | [warm, steady] Stay anchored. Find direction. The Anchored Compass. |
 
-Video 32.6s, 1080x1920, 30 fps. Music: Calm Mind (Pixabay license), lowered under the voice; mix -16 LUFS.
-Line 5 reuses the approved draft 3 take of the same line.
+Video 32.5s, 1080x1920, 30 fps. Music: Calm Mind (Pixabay license), lowered under the voice; mix -16 LUFS.
+Line 5 is the shared closing take (series/_src/s5_stay_anchored.mp3).
