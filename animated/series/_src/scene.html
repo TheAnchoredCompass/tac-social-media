@@ -115,7 +115,7 @@ function render(t){
    <div id="phone"><div id="slider" style="transform:translateX(${-x*860}px)">${left}${tacScreen(t)}</div></div>
    <div id="foot"><img src="emblem.png">The Anchored Compass</div><div id="note">Illustrative example</div>`;
   if(t>=T.end0){const o=clamp((t-T.end0)/(T.end1-T.end0),0,1);
-    html+=`<div id="end" style="opacity:${o}"><img src="emblem.png"><h1>Pause.<br>Ask.<br>Say it better.</h1><div class="rule"></div>
+    html+=`<div id="end" style="opacity:${o}"><img src="emblem.png"><h1>Stay anchored.<br>Find direction.</h1><div class="rule"></div>
       <p>Sign up to be notified<br>when our beta opens.</p><div class="url">theanchoredcompass.com</div></div><div id="frame" style="opacity:${o}"></div>
       <div id="foot" style="opacity:${o}"><img src="emblem.png">The Anchored Compass</div>`;}
   st.innerHTML=html;

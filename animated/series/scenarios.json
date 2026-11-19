@@ -16,7 +16,7 @@
    "[regretful, slower] But you know how that would sound in the morning.",
    "[calm, warm] So you pause. You tell Tack you're anxious, not guilty. And it helps you answer like the professional you are.",
    "[relieved] Calm. Open. Ready to fix it. And the meeting starts on your side.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  },
  "partner": {
@@ -36,7 +36,7 @@
    "[regretful, slower] The words are sharp... and you know they'd cut both ways.",
    "[calm, warm] So you pause. You tell Tack what it really feels like: unimportant. And it helps you say it plainly.",
    "[relieved] Honest. Not cruel. And this time, they actually hear you.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  },
  "coparent": {
@@ -56,7 +56,7 @@
    "[regretful, slower] But this isn't about winning. It's about the kids.",
    "[calm, warm] So you pause. You tell Tack you're furious, and tired. And it helps you keep it simple, and about them.",
    "[relieved] A plan, not a fight. And Friday just got easier.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  },
  "coworker": {
@@ -76,7 +76,7 @@
    "[regretful, slower] But a callout in writing lasts forever.",
    "[calm, warm] So you pause. You tell Tack what happened, and how it felt. And it helps you ask for a real conversation.",
    "[confident, warm] Direct. Private. Fair. And your work gets the credit it deserves.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  },
  "mom": {
@@ -96,7 +96,7 @@
    "[regretful, slower] But she's still your mom... and that's not what you mean.",
    "[calm, warm] So you pause. You tell Tack you love her, and you feel pressured. And it helps you say both.",
    "[warm, relieved] Love first. Then the limit. And it lands softly.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  },
  "day29_holiday": {
@@ -116,7 +116,7 @@
    "[regretful, slower] But a sharp answer now just sets the table for a fight.",
    "[calm, warm] So you pause. You tell Tack you're dreading it. And it helps you plan a short, kind answer, while you're calm.",
    "[relieved] Short. Kind. New topic. You don't owe anyone a debate over dinner.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  },
  "day30_hardtext": {
@@ -136,7 +136,7 @@
    "[regretful, slower] But would you say that out loud, to their face? Probably not.",
    "[calm, warm] So you pause. Tack asks what you actually want to happen. And it helps you say just that.",
    "[relieved, light] Calm words. And the problem solves itself.",
-   "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+   "[warm, steady] Stay anchored. Find direction. The Anchored Compass."
   ]
  }
 }

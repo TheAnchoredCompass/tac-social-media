@@ -101,7 +101,7 @@ def build(name, preview=False):
     md = [f'# {name}: narration (My Cloned Voice 2, eleven_v4, one take each)', '| Starts | Line |', '|---|---|']
     md += [f'| {s:.2f}s | {l} |' for s, l in zip(starts, lines)]
     md.append(f'\nVideo {total:.1f}s, 1080x1920, 30 fps. Music: Calm Mind (Pixabay license), lowered under the voice; mix -16 LUFS.')
-    md.append('Line 5 reuses the approved draft 3 take of the same line.')
+    md.append('Line 5 is the shared closing take (series/_src/s5_stay_anchored.mp3).')
     open(os.path.join(out, 'NARRATION.md'), 'w').write('\n'.join(md) + '\n')
     os.remove(silent)
     return T, starts
