@@ -1,4 +1,6 @@
 # Raw audio stays local: the licensed music track and the cloned-voice takes are not stored on GitHub
 *.mp3
 *.m4a
-_src/cfg.js
+# Render scratch
+series/_src/cfg.js
+silent.mp4
