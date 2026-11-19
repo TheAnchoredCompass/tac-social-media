@@ -1,0 +1,92 @@
+{
+  "boss": {
+    "contact": "Dana", "contactSub": "Manager", "initial": "D",
+    "caption1": "The late-night text from your boss.",
+    "incoming": "Can we talk first thing tomorrow? We need to go over the Henderson report.",
+    "bad": "If this is about the deadline, I told you weeks ago it wasn't realistic. Not my fault.",
+    "question": "My boss wants to talk about a report that went badly. I'm anxious and defensive. How do I reply?",
+    "answerLead": "Lead with openness, not a defense.",
+    "answerTry": "Try: “Sure, 9 works. I'd like to walk through what happened and how we fix it.”",
+    "good": "Sure, 9 works. I'd like to walk through what happened and how we fix it.",
+    "reply": "Perfect. Thanks, I appreciate that.",
+    "narration": [
+      "[anxious] A late text from your boss. Your stomach drops, and the defense writes itself.",
+      "[regretful, slower] But you know how that would sound in the morning.",
+      "[calm, warm] So you pause. You tell Tack you're anxious, not guilty. And it helps you answer like the professional you are.",
+      "[relieved] Calm. Open. Ready to fix it. And the meeting starts on your side.",
+      "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+    ]
+  },
+  "partner": {
+    "contact": "Jordan", "contactSub": "Text message", "initial": "J",
+    "caption1": "They forgot. Again.",
+    "incoming": "Totally forgot we had dinner plans tonight 😬 Work ran late. Rain check?",
+    "bad": "Of course you forgot. I'm always last on your list.",
+    "question": "My partner forgot our dinner plans again. I feel unimportant. How do I say that without a fight?",
+    "answerLead": "Share the impact, not the verdict.",
+    "answerTry": "Try: “I was really looking forward to tonight. When plans slip, I feel less important. Can we talk about it?”",
+    "good": "I was really looking forward to tonight. When plans slip, I feel less important. Can we talk about it?",
+    "reply": "You're right. I'm sorry. Let's talk when I get home 💛",
+    "narration": [
+      "[hurt] They forgot. Again. And it stings more than you want to admit.",
+      "[regretful, slower] The words are sharp... and you know they'd cut both ways.",
+      "[calm, warm] So you pause. You tell Tack what it really feels like: unimportant. And it helps you say it plainly.",
+      "[relieved] Honest. Not cruel. And this time, they actually hear you.",
+      "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+    ]
+  },
+  "coparent": {
+    "contact": "Alex", "contactSub": "Co-parent", "initial": "A",
+    "caption1": "Another last-minute change.",
+    "incoming": "Can't do pickup Friday. You'll need to get the kids.",
+    "bad": "Unbelievable. You never stick to the schedule and I always have to fix it.",
+    "question": "My co-parent canceled pickup last minute again. I'm furious. How do I keep it about the kids?",
+    "answerLead": "Stick to the plan, not the past.",
+    "answerTry": "Try: “I can get them Friday at 5. Going forward, can we confirm pickups by Wednesday?”",
+    "good": "I can get them Friday at 5. Going forward, can we confirm pickups by Wednesday?",
+    "reply": "That works. I'll confirm by Wednesday. Thanks.",
+    "narration": [
+      "[exasperated] Another last-minute change. And every old fight comes rushing back.",
+      "[regretful, slower] But this isn't about winning. It's about the kids.",
+      "[calm, warm] So you pause. You tell Tack you're furious, and tired. And it helps you keep it simple, and about them.",
+      "[relieved] A plan, not a fight. And Friday just got easier.",
+      "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+    ]
+  },
+  "coworker": {
+    "contact": "Chris", "contactSub": "Teammate", "initial": "C",
+    "caption1": "They took the credit.",
+    "incoming": "Great meeting today! Glad the client liked my idea 🙌",
+    "bad": "YOUR idea? That was my proposal and you know it.",
+    "question": "A coworker took credit for my work in front of a client. How do I address it without starting a war?",
+    "answerLead": "Be direct, private and specific.",
+    "answerTry": "Try: “Can we grab 10 minutes tomorrow? I want to talk about how we share credit on the proposal.”",
+    "good": "Can we grab 10 minutes tomorrow? I want to talk about how we share credit on the proposal.",
+    "reply": "Sure, 10 a.m.? And you're right, I should have named you.",
+    "narration": [
+      "[angry] Your work. Their name. And the anger is instant.",
+      "[regretful, slower] But a callout in writing lasts forever.",
+      "[calm, warm] So you pause. You tell Tack what happened, and how it felt. And it helps you ask for a real conversation.",
+      "[confident, warm] Direct. Private. Fair. And your work gets the credit it deserves.",
+      "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+    ]
+  },
+  "mom": {
+    "contact": "Mom", "contactSub": "Text message", "initial": "M",
+    "caption1": "The guilt trip lands.",
+    "incoming": "So when are you coming home? It's been months. Your sister visits every weekend.",
+    "bad": "Maybe if every visit wasn't a guilt trip, I'd come more.",
+    "question": "My mom keeps guilt-tripping me about visiting. I love her, but I feel pressured. How do I set a kind boundary?",
+    "answerLead": "Lead with love, then the limit.",
+    "answerTry": "Try: “I love you and I miss you too. I can't come this month, but let's plan a weekend in December.”",
+    "good": "I love you and I miss you too. I can't come this month, but let's plan a weekend in December.",
+    "reply": "That would make me so happy. December it is ❤️",
+    "narration": [
+      "[frustrated, tender] The same question. The same guilt. And all of it comes out at once.",
+      "[regretful, slower] But she's still your mom... and that's not what you mean.",
+      "[calm, warm] So you pause. You tell Tack you love her, and you feel pressured. And it helps you say both.",
+      "[warm, relieved] Love first. Then the limit. And it lands softly.",
+      "[warm, steady] Pause. Ask. Say it better. The Anchored Compass."
+    ]
+  }
+}

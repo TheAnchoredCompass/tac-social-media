@@ -1,0 +1,124 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Zilla;src:url(fonts/zilla-slab-latin-700-normal.woff2) format('woff2');font-weight:700}
+@font-face{font-family:Zilla;src:url(fonts/zilla-slab-latin-600-normal.woff2) format('woff2');font-weight:600}
+@font-face{font-family:SSerif;src:url(fonts/source-serif-4-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:SSerif;src:url(fonts/source-serif-4-latin-600-normal.woff2) format('woff2');font-weight:600}
+:root{--navy:#092238;--navy2:#0A2439;--cream:#FAF7F2;--gold:#9D7B45;--lgold:#EAC689;--line:#E4DCCD;--ink:#0A2439}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;background:var(--navy);overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:var(--navy);font-family:SSerif,'Noto Color Emoji',serif;color:var(--cream)}
+#frame{position:absolute;inset:28px;border:2px solid rgba(250,247,242,.12)}
+#kicker{position:absolute;left:110px;top:170px;font:600 30px SSerif;letter-spacing:6px;color:var(--lgold);text-transform:uppercase}
+#caption{position:absolute;left:110px;right:110px;top:220px;font:700 76px/1.15 Zilla;color:var(--cream)}
+#phone{position:absolute;left:110px;top:470px;width:860px;height:1200px;border-radius:52px;background:var(--cream);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+#slider{position:absolute;top:0;left:0;width:1720px;height:100%;display:flex}
+.screen{position:relative;width:860px;height:100%}
+.hdr{height:132px;display:flex;align-items:center;gap:24px;padding:0 40px;border-bottom:2px solid var(--line)}
+.hdr .av{width:72px;height:72px;border-radius:50%;background:#C9B79A;color:var(--navy);display:flex;align-items:center;justify-content:center;font:700 38px Zilla}
+.hdr .nm{font:700 44px Zilla;color:var(--ink)}
+.hdr .sub{font:400 26px SSerif;color:#6B7684}
+.tachdr{background:var(--navy2);border-bottom:none}
+.tachdr .nm{color:var(--cream)} .tachdr .sub{color:var(--lgold)}
+.tachdr img{width:68px;height:auto}
+.msgs{position:absolute;top:150px;left:0;right:0;bottom:250px;padding:10px 36px;display:flex;flex-direction:column;justify-content:flex-end;gap:22px}
+.b{max-width:640px;padding:24px 30px;border-radius:34px;font:400 38px/1.32 SSerif,'Noto Color Emoji';opacity:1}
+.in{align-self:flex-start;background:#fff;border:2px solid var(--line);color:var(--ink);border-bottom-left-radius:10px}
+.out{align-self:flex-end;background:var(--navy2);color:var(--cream);border-bottom-right-radius:10px}
+.tac{align-self:flex-start;background:#F4ECDD;border:2px solid #E3D3B5;color:var(--ink);border-bottom-left-radius:10px}
+.tac b{font-weight:600}
+.dots{align-self:flex-start;background:#fff;border:2px solid var(--line);border-radius:34px;padding:26px 30px;display:flex;gap:12px}
+.dots i{width:16px;height:16px;border-radius:50%;background:#9AA3AE;display:block}
+.inbar{position:absolute;left:28px;right:28px;bottom:30px;min-height:110px;display:flex;align-items:flex-end;gap:18px}
+.field{flex:1;min-height:110px;border:2px solid var(--line);border-radius:44px;background:#fff;padding:28px 34px;font:400 38px/1.3 SSerif;color:var(--ink)}
+.field .ph{color:#A0A7B0}
+.caret{display:inline-block;width:3px;height:42px;background:var(--gold);vertical-align:-8px;margin-left:2px}
+.send{width:96px;height:96px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:7px}
+.send svg{width:44px;height:44px}
+#foot{position:absolute;left:62px;bottom:58px;display:flex;align-items:center;gap:16px;font:600 30px SSerif;color:var(--lgold)}
+#foot img{width:40px}
+#note{position:absolute;right:62px;bottom:62px;font:400 24px SSerif;color:rgba(250,247,242,.45)}
+#end{position:absolute;inset:0;background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:0 110px 120px}
+#end img{width:190px;margin-bottom:56px}
+#end h1{font:700 96px/1.12 Zilla;color:var(--cream)}
+#end .rule{width:110px;height:5px;background:var(--gold);margin:52px 0}
+#end p{font:400 56px/1.35 SSerif;color:var(--cream)}
+#end .url{font:600 56px SSerif;color:var(--lgold);margin-top:18px}
+</style></head>
+<body><div id="stage"></div>
+<script src="cfg.js"></script>
+<script>
+const SEND='<svg viewBox="0 0 24 24"><path d="M21 12L4 4l3.5 8L4 20z" fill="#FAF7F2"/></svg>';
+const C=window.CFG;
+const BAD=C.bad, Q=C.question, A=[C.answerLead,C.answerTry], GOOD=C.good, SAM_IN=C.incoming, SAM_REPLY=C.reply;
+const T=C.T;
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function typed(str,t0,t1,t){const n=Math.round(clamp((t-t0)/(t1-t0),0,1)*str.length);return str.slice(0,n)}
+function caretOn(t){return Math.floor(t*2.2)%2===0}
+function field(text,t,active){
+  if(!text) return `<div class="field"><span class="ph">Message</span>${active&&caretOn(t)?'<span class="caret"></span>':''}</div>`;
+  return `<div class="field">${esc(text)}${active?'<span class="caret"></span>':''}</div>`;}
+function dots(t){let h='<div class="dots">';for(let k=0;k<3;k++){const y=Math.sin(t*9-k*0.9)*6;h+=`<i style="transform:translateY(${y.toFixed(1)}px)"></i>`}return h+'</div>'}
+function pop(t0,t){const p=clamp((t-t0)/0.25,0,1);return `opacity:${p};transform:translateY(${(1-ease(p))*24}px)`}
+function msgsBottom(f){const txt=f.replace(/<[^>]*>/g,'');const lines=Math.max(1,Math.ceil(txt.length/27));return Math.max(250,30+56+lines*50+40)}
+function samScreen(t){
+  let m=`<div class="b in">${esc(SAM_IN)}</div>`; let f='';
+  if(t<T.s1a){ // bad draft, then delete
+    let txt='';
+    if(t<T.del0) txt=typed(BAD,T.bad0,T.bad1,t);
+    else txt=BAD.slice(0,BAD.length-Math.round(clamp((t-T.del0)/(T.del1-T.del0),0,1)*BAD.length));
+    f=field(txt,t,true);
+  } else if(t<T.gsend){
+    m+='';
+    f=field(t<T.g0?'':typed(GOOD,T.g0,T.g1,t),t,t>=T.s2b);
+  } else {
+    m+=`<div class="b out" style="${pop(T.gsend,t)}">${esc(GOOD)}</div>`;
+    if(t>=T.sd0&&t<T.sr) m+=dots(t);
+    if(t>=T.sr) m+=`<div class="b in" style="${pop(T.sr,t)}">${esc(SAM_REPLY)}</div>`;
+    f=field('',t,false);
+  }
+  return `<div class="screen"><div class="hdr"><div class="av">${C.initial}</div><div><div class="nm">${C.contact}</div><div class="sub">${C.contactSub}</div></div></div>
+    <div class="msgs" style="bottom:${msgsBottom(f)}px">${m}</div><div class="inbar">${f}<div class="send">${SEND}</div></div></div>`;}
+function tacScreen(t){
+  let m='',f='';
+  if(t<T.qsend){ f=field(t<T.q0?'':typed(Q,T.q0,T.q1,t),t,t>=T.s1b); }
+  else{
+    m+=`<div class="b out" style="${pop(T.qsend,t)}">${esc(Q)}</div>`;
+    if(t>=T.dot0&&t<T.a0) m+=dots(t);
+    if(t>=T.a0){
+      const words=(A[0]+' \n'+A[1]).split(' '); const n=Math.ceil(clamp((t-T.a0)/(T.a1-T.a0),0,1)*words.length);
+      let s=words.slice(0,n).join(' ');
+      const parts=s.split('\n'); let html='<b>'+esc(parts[0].trim())+'</b>'; if(parts.length>1) html+='<br>'+esc(parts[1].trim());
+      m+=`<div class="b tac" style="${pop(T.a0,t)}">${html}</div>`;
+    }
+    f=field('',t,false);
+  }
+  return `<div class="screen"><div class="hdr tachdr"><img src="emblem.png"><div><div class="nm">TAC</div><div class="sub">The Anchored Compass</div></div></div>
+    <div class="msgs">${m}</div><div class="inbar">${f}<div class="send">${SEND}</div></div></div>`;}
+function caption(t){
+  if(t<T.del0-0.3) return ['Before you hit send',C.caption1];
+  if(t<T.s1a) return ['Before you hit send','Delete it.'];
+  if(t<T.s2a) return ['Pause','Ask TAC first.'];
+  return ['Then','Say it better.'];}
+function render(t){
+  const st=document.getElementById('stage');
+  // slide: Sam (0) -> TAC (1) -> Sam (0)
+  let x=0;
+  if(t>=T.s1a&&t<T.s2a) x=ease(clamp((t-T.s1a)/(T.s1b-T.s1a),0,1));
+  if(t>=T.s2a) x=1-ease(clamp((t-T.s2a)/(T.s2b-T.s2a),0,1));
+  const [k,c]=caption(t);
+  const left = (t<T.s2a)? samScreen(Math.min(t,T.s1a-0.001)) : samScreen(t);
+  let html=`<div id="frame"></div><div id="kicker">${k}</div><div id="caption">${c}</div>
+   <div id="phone"><div id="slider" style="transform:translateX(${-x*860}px)">${left}${tacScreen(t)}</div></div>
+   <div id="foot"><img src="emblem.png">The Anchored Compass</div><div id="note">Illustrative example</div>`;
+  if(t>=T.end0){const o=clamp((t-T.end0)/(T.end1-T.end0),0,1);
+    html+=`<div id="end" style="opacity:${o}"><img src="emblem.png"><h1>Pause.<br>Ask.<br>Say it better.</h1><div class="rule"></div>
+      <p>Sign up to be notified<br>when our beta opens.</p><div class="url">theanchoredcompass.com</div></div><div id="frame" style="opacity:${o}"></div>
+      <div id="foot" style="opacity:${o}"><img src="emblem.png">The Anchored Compass</div>`;}
+  st.innerHTML=html;
+}
+window.TOTAL=T.total; render(0);
+</script></body></html>
